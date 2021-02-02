@@ -1,0 +1,41 @@
+
+server:
+  port: 18082
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+    sentinel:
+      transport:
+        dashboard: localhost:8080
+        port: 8719
+    alibaba:
+      seata:
+        tx-service-group: gmall-tx-group
+  sleuth:
+    sampler:
+      probability: 1
+  zipkin:
+    base-url: http://localhost:9411
+    sender:
+      type: web
+    locator:
+      discovery:
+        enabled: false
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/guli_sms
+    username: root
+    password: root
+  redis:
+    host: 192.168.6.128
+feign:
+  sentinel:
+    enabled: true
+mybatis-plus:
+  mapper-locations: classpath:mapper/sms/**/*.xml
+  type-aliases-package: com.atguigu.sms.entity
+  global-config:
+    db-config:
+      id-type: auto
