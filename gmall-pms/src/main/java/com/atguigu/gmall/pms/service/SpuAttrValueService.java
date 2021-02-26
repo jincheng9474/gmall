@@ -6,7 +6,6 @@ import com.atguigu.gmall.common.bean.PageParamVo;
 import com.atguigu.gmall.pms.entity.SpuAttrValueEntity;
 
 import java.util.List;
-import java.util.Map;
 
 /**
  * spu属性值

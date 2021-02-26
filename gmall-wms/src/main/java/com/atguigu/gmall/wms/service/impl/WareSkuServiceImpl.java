@@ -1,6 +1,6 @@
 package com.atguigu.gmall.wms.service.impl;
 
-import com.atguigu.gmall.pms.entity.WareSkuEntity;
+import com.atguigu.gmall.wms.entity.WareSkuEntity;
 import org.springframework.stereotype.Service;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.core.metadata.IPage;

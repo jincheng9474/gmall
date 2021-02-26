@@ -2,7 +2,7 @@ package com.atguigu.gmall.wms.controller;
 
 import java.util.List;
 
-import com.atguigu.gmall.pms.entity.PurchaseDetailEntity;
+import com.atguigu.gmall.wms.entity.PurchaseDetailEntity;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,6 +1,6 @@
 package com.atguigu.gmall.wms.service;
 
-import com.atguigu.gmall.pms.entity.WareOrderBillEntity;
+import com.atguigu.gmall.wms.entity.WareOrderBillEntity;
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;

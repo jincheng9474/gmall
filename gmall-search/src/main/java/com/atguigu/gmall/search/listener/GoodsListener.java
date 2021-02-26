@@ -2,6 +2,7 @@ package com.atguigu.gmall.search.listener;
 
 import com.atguigu.gmall.common.bean.ResponseVo;
 import com.atguigu.gmall.pms.entity.*;
+import com.atguigu.gmall.wms.entity.*;
 import com.atguigu.gmall.search.feign.GmallPmsClient;
 import com.atguigu.gmall.search.feign.GmallWmsClient;
 import com.atguigu.gmall.search.pojo.Goods;

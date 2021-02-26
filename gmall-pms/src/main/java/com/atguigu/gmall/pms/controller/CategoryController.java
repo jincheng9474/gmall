@@ -11,7 +11,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.atguigu.gmall.pms.entity.CategoryEntity;
@@ -35,6 +34,12 @@ public class CategoryController {
     @Autowired
     private CategoryService categoryService;
 
+    @GetMapping("all/{cid}")
+    public ResponseVo<List<CategoryEntity>> query123CategoriesByCid3(@PathVariable("cid")Long cid){
+        List<CategoryEntity> categoryEntities = this.categoryService.query123CategoriesByCid3(cid);
+        return ResponseVo.ok(categoryEntities);
+    }
+
     @GetMapping("parent/withsubs/{pid}")
     public ResponseVo<List<CategoryEntity>> queryLvl2CatesWithSubsByPid(@PathVariable("pid")Long pid){
         List<CategoryEntity> categoryEntities = this.categoryService.queryLvl2CatesWithSubsByPid(pid);
@@ -43,12 +48,12 @@ public class CategoryController {
 
     @GetMapping("parent/{parentId}")
     public ResponseVo<List<CategoryEntity>> queryCategoriesByPid(@PathVariable("parentId")Long pid){
-        QueryWrapper<CategoryEntity> queryWrapper = new QueryWrapper<>();
+        QueryWrapper<CategoryEntity> wrapper = new QueryWrapper<>();
         if (pid != -1){
-            queryWrapper.eq("parent_id", pid);
+            wrapper.eq("parent_id", pid);
         }
-        List<CategoryEntity> list = this.categoryService.list(queryWrapper);
-        return ResponseVo.ok(list);
+        List<CategoryEntity> categoryEntities = this.categoryService.list(wrapper);
+        return ResponseVo.ok(categoryEntities);
     }
     /**
      * 列表

@@ -2,7 +2,7 @@ package com.atguigu.gmall.wms.controller;
 
 import java.util.List;
 
-import com.atguigu.gmall.pms.entity.WareSkuEntity;
+import com.atguigu.gmall.wms.entity.WareSkuEntity;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;

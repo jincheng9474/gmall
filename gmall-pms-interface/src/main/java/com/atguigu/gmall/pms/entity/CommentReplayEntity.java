@@ -2,17 +2,16 @@ package com.atguigu.gmall.pms.entity;
 
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
-import lombok.Data;
 
 /**
  * 商品评价回复关系
  * 
- * @author ZJC
- * @email 1206904379@qq.com
- * @date 2021-01-18 19:48:50
+ * @author fengge
+ * @email fengge@atguigu.com
+ * @date 2021-01-18 14:43:54
  */
 @Data
 @TableName("pms_comment_replay")

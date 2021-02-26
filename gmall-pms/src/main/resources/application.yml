@@ -30,9 +30,9 @@ spring:
   rabbitmq:
     host: 192.168.6.128
     port: 5672
-    virtual-host: /fengge
-    username: fengge
-    password: fengge
+    virtual-host: /1206904379
+    username: 1206904379
+    password: 1206904379
     publisher-confirm-type: correlated
     publisher-returns: true
 feign:
@@ -44,3 +44,6 @@ mybatis-plus:
   global-config:
     db-config:
       id-type: auto
+logging:
+  level:
+    com.atguigu.gmall: debug

@@ -1,12 +1,13 @@
 package com.atguigu.gmall.pms.service.impl;
 
-import com.atguigu.gmall.pms.entity.AttrEntity;
 import com.atguigu.gmall.pms.mapper.AttrMapper;
+import com.atguigu.gmall.pms.mapper.SpuAttrValueMapper;
+import com.atguigu.gmall.pms.service.SpuAttrValueService;
+import com.atguigu.gmall.pms.entity.AttrEntity;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Map;
 import java.util.stream.Collectors;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
@@ -15,9 +16,7 @@ import com.baomidou.mybatisplus.extension.service.impl.ServiceImpl;
 import com.atguigu.gmall.common.bean.PageResultVo;
 import com.atguigu.gmall.common.bean.PageParamVo;
 
-import com.atguigu.gmall.pms.mapper.SpuAttrValueMapper;
 import com.atguigu.gmall.pms.entity.SpuAttrValueEntity;
-import com.atguigu.gmall.pms.service.SpuAttrValueService;
 import org.springframework.util.CollectionUtils;
 
 
