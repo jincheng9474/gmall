@@ -26,6 +26,8 @@ spring:
     virtual-host: /1206904379
     username: 1206904379
     password: 1206904379
+    publisher-confirm-type: CORRELATED
+    publisher-returns: true
 feign:
   sentinel:
     enabled: true

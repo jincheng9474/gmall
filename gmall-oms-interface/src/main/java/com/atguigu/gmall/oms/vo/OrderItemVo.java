@@ -1,7 +1,9 @@
-package com.atguigu.gmall.order.pojo;
+package com.atguigu.gmall.oms.vo;
 
 import com.atguigu.gmall.pms.entity.SkuAttrValueEntity;
 import com.atguigu.gmall.sms.vo.ItemSaleVo;
+import com.baomidou.mybatisplus.annotation.TableField;
+import com.baomidou.mybatisplus.annotation.TableId;
 import lombok.Data;
 
 import java.math.BigDecimal;
@@ -18,5 +20,5 @@ public class OrderItemVo {
     private BigDecimal count;
     private Boolean store = false; // 是否有货
     private List<ItemSaleVo> sales; // 营销信息
-    private BigDecimal weight; // 重量
+    private Integer weight; // 重量
 }

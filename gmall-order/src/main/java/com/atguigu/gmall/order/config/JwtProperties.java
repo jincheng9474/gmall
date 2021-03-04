@@ -12,9 +12,7 @@ import java.security.PublicKey;
 public class JwtProperties {
 
     private String pubKeyPath;
-    private Integer expire;
     private String cookieName;
-    private String userKey;
 
     private PublicKey publicKey;
 
@@ -24,9 +22,7 @@ public class JwtProperties {
     @PostConstruct
     public void init(){
         try {
-
             this.publicKey = RsaUtils.getPublicKey(pubKeyPath);
-
         } catch (Exception e) {
             e.printStackTrace();
         }

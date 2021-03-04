@@ -1,28 +1,23 @@
 package com.atguigu.gmall.wms.controller;
 
-import java.util.List;
-
+import com.atguigu.gmall.common.bean.PageParamVo;
+import com.atguigu.gmall.common.bean.PageResultVo;
+import com.atguigu.gmall.common.bean.ResponseVo;
 import com.atguigu.gmall.wms.entity.PurchaseDetailEntity;
+import com.atguigu.gmall.wms.service.PurchaseDetailService;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.atguigu.gmall.wms.service.PurchaseDetailService;
-import com.atguigu.gmall.common.bean.PageResultVo;
-import com.atguigu.gmall.common.bean.ResponseVo;
-import com.atguigu.gmall.common.bean.PageParamVo;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 
  *
- * @author ZJC
- * @email 1206904379@qq.com
- * @date 2021-01-21 15:22:11
+ * @author fengge
+ * @email fengge@atguigu.com
+ * @date 2021-01-20 14:48:43
  */
 @Api(tags = " 管理")
 @RestController

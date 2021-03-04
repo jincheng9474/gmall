@@ -19,17 +19,29 @@ spring:
       type: web
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://localhost:3306/guli_wms
+    url: jdbc:mysql://127.0.0.1:3306/guli_wms
     username: root
     password: root
   redis:
     host: 192.168.6.128
+  rabbitmq:
+    host: 192.168.6.128
+    virtual-host: /1206904379
+    username: 1206904379
+    password: 1206904379
+    listener:
+      simple:
+        prefetch: 1
+        concurrency: 3
+        acknowledge-mode: manual
+    publisher-confirm-type: correlated
+    publisher-returns: true
 feign:
   sentinel:
     enabled: true
 mybatis-plus:
   mapper-locations: classpath:mapper/wms/**/*.xml
-  type-aliases-package: com.atguigu.gmall.pms.api.entity
+  type-aliases-package: com.atguigu.gmall.wms.entity
   global-config:
     db-config:
       id-type: auto

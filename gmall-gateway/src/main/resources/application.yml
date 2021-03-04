@@ -35,9 +35,6 @@ spring:
           uri: lb://index-service
           predicates:
             - Host=www.gmall.com, gmall.com
-          filters:
-            - AddResponseHeader=xxx, yyy
-            - Auth=/
         - id: index-route2
           uri: lb://index-service
           predicates:
@@ -60,6 +57,16 @@ spring:
             - Host=order.gmall.com
           filters:
             - Auth=/
+        - id: payment-route
+          uri: lb://payment-service
+          predicates:
+            - Host=payment.gmall.com
+          filters:
+            - Auth=/
+        - id: payment-route
+          uri: lb://payment-service
+          predicates:
+            - Path=/pay/**
 jwt:
   pubKeyPath: E:\Java\电商\rsa\rsa.pub
   cookieName: GMALL-TOKEN

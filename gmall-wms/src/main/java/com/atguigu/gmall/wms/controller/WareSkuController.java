@@ -1,29 +1,25 @@
 package com.atguigu.gmall.wms.controller;
 
-import java.util.List;
-
+import com.atguigu.gmall.common.bean.PageParamVo;
+import com.atguigu.gmall.common.bean.PageResultVo;
+import com.atguigu.gmall.common.bean.ResponseVo;
 import com.atguigu.gmall.wms.entity.WareSkuEntity;
+import com.atguigu.gmall.wms.service.WareSkuService;
+import com.atguigu.gmall.wms.vo.SkuLockVo;
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RestController;
-import com.atguigu.gmall.wms.service.WareSkuService;
-import com.atguigu.gmall.common.bean.PageResultVo;
-import com.atguigu.gmall.common.bean.ResponseVo;
-import com.atguigu.gmall.common.bean.PageParamVo;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 /**
  * 商品库存
  *
- * @author ZJC
- * @email 1206904379@qq.com
- * @date 2021-01-21 15:22:11
+ * @author fengge
+ * @email fengge@atguigu.com
+ * @date 2021-01-20 14:48:43
  */
 @Api(tags = "商品库存 管理")
 @RestController
@@ -33,11 +29,18 @@ public class WareSkuController {
     @Autowired
     private WareSkuService wareSkuService;
 
+    @PostMapping("check/lock/{orderToken}")
+    public ResponseVo<List<SkuLockVo>> checkAndLock(@RequestBody List<SkuLockVo> lockVos, @PathVariable("orderToken")String orderToken){
+        List<SkuLockVo> skuLockVos = this.wareSkuService.checkAndLock(lockVos, orderToken);
+        return ResponseVo.ok(skuLockVos);
+    }
+
     @GetMapping("sku/{skuId}")
     public ResponseVo<List<WareSkuEntity>> queryWareSkusBySkuId(@PathVariable("skuId")Long skuId){
         List<WareSkuEntity> wareSkuEntities = this.wareSkuService.list(new QueryWrapper<WareSkuEntity>().eq("sku_id", skuId));
         return ResponseVo.ok(wareSkuEntities);
     }
+
     /**
      * 列表
      */

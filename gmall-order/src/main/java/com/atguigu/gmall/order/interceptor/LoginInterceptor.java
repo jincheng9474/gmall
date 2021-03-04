@@ -9,20 +9,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.context.properties.EnableConfigurationProperties;
 import org.springframework.stereotype.Component;
 import org.springframework.web.servlet.HandlerInterceptor;
+import sun.rmi.runtime.Log;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 import java.util.UUID;
 
-/**
- * @author : ZJC
- * @date : 2021/2/23 17:58
- * className : LoginInterceptor
- * package: com.atguigu.gmall.cart.interceptor
- * version : 1.0
- * Description
- */
 @Component
 @EnableConfigurationProperties(JwtProperties.class)
 public class LoginInterceptor implements HandlerInterceptor {
@@ -34,7 +27,6 @@ public class LoginInterceptor implements HandlerInterceptor {
 
     @Override
     public boolean preHandle(HttpServletRequest request, HttpServletResponse response, Object handler) throws Exception {
-        System.out.println("这是拦截器的前置方法");
 
         UserInfo userInfo = new UserInfo();
 
