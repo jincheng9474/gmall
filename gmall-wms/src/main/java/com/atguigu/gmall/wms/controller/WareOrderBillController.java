@@ -15,8 +15,8 @@ import java.util.List;
 /**
  * 库存工作单
  *
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-01-20 14:48:43
  */
 @Api(tags = "库存工作单 管理")

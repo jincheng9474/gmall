@@ -22,8 +22,8 @@ import com.atguigu.gmall.common.bean.PageParamVo;
 /**
  * 订单项信息
  *
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-02-27 15:30:47
  */
 @Api(tags = "订单项信息 管理")

@@ -9,8 +9,8 @@ import java.io.Serializable;
 /**
  * 品牌分类关联
  * 
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-01-18 14:43:54
  */
 @Data

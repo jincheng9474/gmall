@@ -7,8 +7,8 @@ import org.apache.ibatis.annotations.Mapper;
 /**
  * 仓库信息
  * 
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-01-20 14:48:43
  */
 @Mapper

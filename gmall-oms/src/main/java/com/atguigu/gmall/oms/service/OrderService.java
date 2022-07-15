@@ -9,8 +9,8 @@ import com.atguigu.gmall.oms.entity.OrderEntity;
 /**
  * 订单
  *
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-02-27 15:30:47
  */
 public interface OrderService extends IService<OrderEntity> {

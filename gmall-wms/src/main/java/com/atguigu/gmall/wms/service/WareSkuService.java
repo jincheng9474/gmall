@@ -11,8 +11,8 @@ import java.util.List;
 /**
  * 商品库存
  *
- * @author fengge
- * @email fengge@atguigu.com
+ * @author ZJC
+ * @email 1206904379@qq.com
  * @date 2021-01-20 14:48:43
  */
 public interface WareSkuService extends IService<WareSkuEntity> {
